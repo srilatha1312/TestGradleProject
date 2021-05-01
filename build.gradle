@@ -28,6 +28,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 */
+systemProp.sonar.host.url=http://localhost:9000
+
+
 
 plugins {
     id 'java'
