@@ -34,6 +34,7 @@ dependencies {
 plugins {
     id 'java'
     id 'application'
+    id 'jacoco'
 
 }
 
@@ -73,3 +74,15 @@ task wrapper(type: Wrapper) {
     gradleVersion = '3.5'
 }
 // end::wrapper[]
+
+jacoco {
+    toolVersion = "0.7.5+"
+}
+
+jacocoTestReport {
+    reports {
+        html.enabled = true
+        xml.enabled = true
+        csv.enabled = false
+    }
+}
