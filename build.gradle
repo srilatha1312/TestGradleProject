@@ -16,6 +16,13 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
+
+
+plugins {
+  id "org.sonarqube" version "3.1.1"
+}
+
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
@@ -28,9 +35,13 @@ dependencies {
 }
 */
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'application'
+plugins {
+    id 'java'
+    id 'application'
+    id "org.sonarqube" version "3.1.1"
+}
+
+
 
 mainClassName = 'hello.HelloWorld'
 
@@ -58,7 +69,13 @@ dependencies {
 // end::dependencies[]
 
 // tag::wrapper[]
-task wrapper(type: Wrapper) {
+task wrapper(type: Wrapper) {HelloWorld
     gradleVersion = '3.5'
 }
 // end::wrapper[]
+
+task sonarqube {
+    properties {
+        property "sonar.sourceEncoding", "UTF-8"
+    }
+}
