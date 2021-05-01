@@ -73,9 +73,3 @@ task wrapper(type: Wrapper) {
     gradleVersion = '3.5'
 }
 // end::wrapper[]
-
-task sonarqube {
-    properties {
-        property "sonar.sourceEncoding", "UTF-8"
-    }
-}
