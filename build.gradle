@@ -69,7 +69,7 @@ dependencies {
 // end::dependencies[]
 
 // tag::wrapper[]
-task wrapper(type: Wrapper) {HelloWorld
+task wrapper(type: Wrapper) {
     gradleVersion = '3.5'
 }
 // end::wrapper[]
