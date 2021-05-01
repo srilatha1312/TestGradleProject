@@ -26,7 +26,7 @@ pipeline
         stage('Unit Test cases'){
            steps {
               script {
-                  bat './gradlew test'
+                  bat './gradlew jacocoTestReport'
               }
            }
         }

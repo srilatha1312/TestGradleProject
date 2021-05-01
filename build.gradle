@@ -76,10 +76,11 @@ task wrapper(type: Wrapper) {
 // end::wrapper[]
 
 jacoco {
-    toolVersion = "0.7.5+"
+    toolVersion = "0.7.4+"
 }
 
 jacocoTestReport {
+    dependsOn test
     reports {
         html.enabled = true
         xml.enabled = true
