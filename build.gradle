@@ -28,7 +28,11 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 */
+<<<<<<< HEAD
 //systemProp.sonar.host.url=http://localhost:9000
+=======
+
+>>>>>>> 5b809cd4c2eed8d441049c33fe1e34bf5bd00f7c
 
 
 
@@ -42,10 +46,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
-    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
-}
 
 
 mainClassName = 'hello.HelloWorld'
